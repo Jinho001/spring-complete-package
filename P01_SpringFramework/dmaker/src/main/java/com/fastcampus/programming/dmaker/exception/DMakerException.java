@@ -2,6 +2,7 @@ package com.fastcampus.programming.dmaker.exception;
 
 import lombok.Getter;
 
+@Getter
 public class DMakerException extends RuntimeException{
     private DMakerErrorCode dmakerErrorCode;
     private String detailMessage;

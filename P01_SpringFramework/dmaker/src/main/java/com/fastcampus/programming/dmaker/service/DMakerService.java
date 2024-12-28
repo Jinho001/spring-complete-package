@@ -19,6 +19,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import static com.fastcampus.programming.dmaker.exception.DMakerErrorCode.*;
+import static com.fastcampus.programming.dmaker.type.DeveloperLevel.*;
 
 @Service
 @RequiredArgsConstructor
@@ -54,10 +55,10 @@ public class DMakerService {
 //        if(developer.isPresent())
 //            throw new DMakerException(DUPLICATED_MEMBER_ID);
 
-        developerRepository.findByMemberId(request.getMemberId())
-                .ifPresent((developer -> {
-                    throw new DMakerException(DUPLICATED_MEMBER_ID);
-                }));
+            developerRepository.findByMemberId(request.getMemberId())
+                    .ifPresent((developer -> {
+                        throw new DMakerException(DUPLICATED_MEMBER_ID);
+                    }));
     }
 
     public List<DeveloperDto> getAllEmployedDevelopers() {
@@ -95,7 +96,7 @@ public class DMakerService {
     }
 
     private static void validateDeveloperLevel(DeveloperLevel developerLevel, Integer experienceYears) {
-        if(developerLevel == DeveloperLevel.SENIOR && experienceYears < 10){
+        if(developerLevel == SENIOR && experienceYears < 10){
             //throw new RuntimeException("SENIOR need 10 years experience.");
             throw new DMakerException(LEVEL_EXPERIENCE_YEARS_NOT_MATCHED);
         }
