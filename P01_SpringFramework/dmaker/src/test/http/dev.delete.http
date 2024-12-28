@@ -1,0 +1,2 @@
+DELETE http://localhost:8080/developer/Cloud
+Accept: application/json

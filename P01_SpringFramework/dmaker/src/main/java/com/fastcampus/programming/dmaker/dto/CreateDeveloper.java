@@ -25,7 +25,6 @@ public class CreateDeveloper {
         @Min(0)
         @Max(20)
         private Integer experienceYears;
-
         @NotNull
         @Size(min = 3, max = 50, message = "memberId size must 3~50")
         private String memberId;
