@@ -69,5 +69,4 @@ class DMakerControllerTest {
                                 is(DeveloperLevel.SENIOR.name()))
                 );
     }
-
 }
