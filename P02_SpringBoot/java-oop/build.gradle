@@ -2,7 +2,7 @@ plugins {
     id 'java'
 }
 
-group = 'com.fastcampus'
+group = 'com.fastcampus.javaoop'
 version = '1.0-SNAPSHOT'
 
 repositories {
